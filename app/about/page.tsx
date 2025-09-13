@@ -1,11 +1,11 @@
 import React from 'react';
 
 const page = () => {
-  return (
-    <div>
-      Hello
-    </div>
-  );
+    return (
+        <div>
+            about page
+        </div>
+    );
 };
 
 export default page;
