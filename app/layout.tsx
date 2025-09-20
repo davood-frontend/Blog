@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Dosis } from "next/font/google";
 import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
-import localFont from 'next/font/local'
 import MainTheme from "./theme/MainTheme";
-const bYekan = localFont({
-  variable: '--font-bYekan',
-  src: "../public/BYekan.woff2",
-  display: 'swap',
+
+const dosis = Dosis({
+  variable: "--font-geist-dosis",
+  subsets: ["latin"],
+  weight: ['200', '300', '400', '500', '600', '700', '800']
 })
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa-IR" dir="rtl" className={`${bYekan.className}`}>
+    <html className={`${dosis.className}`}>
       <body>
         <AppRouterCacheProvider options={{ key: 'css' }}>
           <MainTheme>
