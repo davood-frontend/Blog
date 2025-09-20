@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa-IR" dir="rtl" className={`${bYekan.className}`}>
+    <html className={`${bYekan.className}`}>
       <body>
         <AppRouterCacheProvider options={{ key: 'css' }}>
           <MainTheme>
