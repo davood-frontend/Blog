@@ -3,7 +3,7 @@ import React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 const theme = createTheme({
     typography: {
-        fontFamily: 'var(--font-bYekan)'
+        fontFamily: 'var(--font-dosis)'
     }
 })
 

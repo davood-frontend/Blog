@@ -3,11 +3,8 @@ import { Box,Typography } from '@mui/material';
 const page = () => {
   return (
    <Box>
-    <Typography>
-      سلام، این یک تست است
-    </Typography>
-    <Typography>
-     Hello, this is a test
+    <Typography sx={{fontWeight:400,fontSize:20}}>
+    Whereas disregard and contempt for human rights have resulted
     </Typography>
    </Box>
   );
