@@ -3,7 +3,7 @@ import { Box,Typography } from '@mui/material';
 const page = () => {
   return (
    <Box>
-    <Typography sx={{fontWeight:400,fontSize:20}}>
+    <Typography >
     Whereas disregard and contempt for human rights have resulted
     </Typography>
    </Box>
