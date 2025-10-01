@@ -3,6 +3,7 @@ import { Dosis } from "next/font/google";
 import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import MainTheme from "./theme/MainTheme";
+import { StoreProvider } from "./store/StoreProvider";
 
 const dosis = Dosis({
   variable: "--font-geist-dosis",
@@ -22,14 +23,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className={`${dosis.className}`}>
-      <body>
-        <AppRouterCacheProvider options={{ key: 'css' }}>
-          <MainTheme>
-            {children}
-          </MainTheme>
-        </AppRouterCacheProvider>
-      </body>
-    </html>
+    <StoreProvider>
+      <html className={`${dosis.className}`}>
+        <body>
+          <AppRouterCacheProvider options={{ key: 'css' }}>
+            <MainTheme>
+              {children}
+            </MainTheme>
+          </AppRouterCacheProvider>
+        </body>
+      </html>
+    </StoreProvider>
   );
 }
