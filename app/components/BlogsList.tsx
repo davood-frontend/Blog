@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
-import { Box, Typography, Avatar } from '@mui/material';
-import { useDispatch, useSelector } from 'react-redux';
+import { Box, Typography } from '@mui/material';
+import { useSelector } from 'react-redux';
 import { RootState } from '../store';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
