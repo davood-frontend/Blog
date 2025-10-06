@@ -1,11 +1,13 @@
 import React from 'react';
-import { Box, AppBar, Toolbar, Button } from '@mui/material';
+import { Box, AppBar, Toolbar, Button, Typography, InputBase} from '@mui/material';
 const Header = () => {
     return (
-        <Box>
-            <AppBar>
+        <Box sx={{ flexGrow: 1, zIndex: 100 }}>
+            <AppBar position='static'>
                 <Toolbar>
-
+                    <Box>
+                      
+                    </Box>
                 </Toolbar>
             </AppBar>
         </Box>
