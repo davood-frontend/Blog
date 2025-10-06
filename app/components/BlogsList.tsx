@@ -11,10 +11,10 @@ import Image from 'next/image';
 const BlogsList = () => {
     const blogs = useSelector((state: RootState) => state.blogs)
     return (
-        <Grid sx={{ p: 2 }} container spacing={2}>
+        <Grid sx={{ p: 2 }} container spacing={3}>
             {blogs.map((item, index) => (
 
-                <Grid key={index} sx={{ border: '1px solid black', borderRadius: 4, overflow: 'hidden' }} size={4} >
+                <Grid key={index} sx={{ borderRadius: 4, overflow: 'hidden', boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px;' }} size={4} >
 
                     <Box sx={{ position: 'relative', width: '100%', height: 350 }}>
                         <Image
