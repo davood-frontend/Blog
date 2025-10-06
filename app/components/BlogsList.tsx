@@ -13,7 +13,9 @@ const BlogsList = () => {
     return (
         <Grid sx={{ p: 2 }} container spacing={2}>
             {blogs.map((item, index) => (
+
                 <Grid key={index} sx={{ border: '1px solid black', borderRadius: 4, overflow: 'hidden' }} size={4} >
+
                     <Box sx={{ position: 'relative', width: '100%', height: 350 }}>
                         <Image
                             src="/blogSample.jpg"
