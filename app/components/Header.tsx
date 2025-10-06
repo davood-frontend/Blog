@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, AppBar, Toolbar, Button, Typography, InputBase, IconButton, Paper, Avatar } from '@mui/material';
+import { Box, AppBar, Toolbar, Button, InputBase, IconButton, Paper, Avatar } from '@mui/material';
+import Link from 'next/link';
 import SearchIcon from '@mui/icons-material/Search';
 const Header = () => {
     return (
@@ -17,9 +18,15 @@ const Header = () => {
                             </IconButton>
                         </Paper>
                         <Box>
-                            <Button>Blogs</Button>
-                            <Button>About</Button>
-                            <Button>Home</Button>
+                            <Link href='/blogs'>
+                                <Button>Blogs</Button>
+                            </Link>
+                            <Link href='/'>
+                                <Button>About</Button>
+                            </Link>
+                            <Link href='/'>
+                                <Button>Home</Button>
+                            </Link>
                         </Box>
                     </Box>
                 </Toolbar>

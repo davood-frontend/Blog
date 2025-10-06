@@ -1,12 +1,11 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import BlogsList from './components/BlogsList';
-import Header from './components/Header';
 const page = () => {
   return (
     <Box>
-      <Header />
-      <BlogsList />
+      <Typography>
+        Hey, this is main page
+      </Typography>
     </Box>
   );
 };

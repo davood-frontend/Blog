@@ -4,7 +4,7 @@ import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import MainTheme from "./theme/MainTheme";
 import { StoreProvider } from "./store/StoreProvider";
-
+import Header from "./components/Header";
 const dosis = Dosis({
   variable: "--font-geist-dosis",
   subsets: ["latin"],
@@ -28,6 +28,7 @@ export default function RootLayout({
         <body>
           <AppRouterCacheProvider options={{ key: 'css' }}>
             <MainTheme>
+              <Header />
               {children}
             </MainTheme>
           </AppRouterCacheProvider>
