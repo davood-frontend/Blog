@@ -14,7 +14,7 @@ const BlogsList = () => {
         <Grid sx={{ p: 2 }} container spacing={3}>
             {blogs.map((item, index) => (
                 <Grid size={4} key={index} >
-                    <Link href='/blog'>
+                    <Link href={`/blogs/${item.id}`} >
                         <Box sx={{
                             borderRadius: 4,
                             overflow: 'hidden',
