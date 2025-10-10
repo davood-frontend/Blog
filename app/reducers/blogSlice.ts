@@ -1,5 +1,5 @@
 import { createSlice, nanoid } from '@reduxjs/toolkit'
-
+import { RootState } from '../store'
 const initialState = [
     {
         id: nanoid(),
@@ -24,7 +24,9 @@ const initialState = [
 const blogsSlice = createSlice({
     name: 'blogs',
     initialState: initialState,
-    reducers: {}
+    reducers: {
+        blogAdded: (state, action) => { state.push(action.payload) }
+    }
 })
-
+export const { blogAdded } = blogsSlice.actions
 export default blogsSlice.reducer

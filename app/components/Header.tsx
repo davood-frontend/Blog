@@ -21,8 +21,8 @@ const Header = () => {
                             <Link href='/blogs'>
                                 <Button>Blogs</Button>
                             </Link>
-                            <Link href='/'>
-                                <Button>About</Button>
+                            <Link href='/newBlog'>
+                                <Button>Creaete blog</Button>
                             </Link>
                             <Link href='/'>
                                 <Button>Home</Button>
