@@ -1,5 +1,12 @@
-import { createSlice, nanoid } from '@reduxjs/toolkit'
+import { createSlice, nanoid, PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from '../store'
+type blog = {
+    id: string,
+    date: string,
+    title: string,
+    category: string,
+    content: string
+}
 const initialState = [
     {
         id: nanoid(),
@@ -25,7 +32,23 @@ const blogsSlice = createSlice({
     name: 'blogs',
     initialState: initialState,
     reducers: {
-        blogAdded: (state, action) => { state.push(action.payload) }
+        blogAdded: {
+            reducer(state, action: PayloadAction<blog>) {
+                state.push(action.payload)
+            },
+            prepare(title, category, content) {
+                //complex
+                return {
+                    payload: {
+                        title,
+                        category,
+                        content,
+                        id: nanoid(),
+                        date: new Date().toISOString()
+                    }
+                }
+            }
+        }
     }
 })
 export const { blogAdded } = blogsSlice.actions

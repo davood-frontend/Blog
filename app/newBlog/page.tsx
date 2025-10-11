@@ -16,7 +16,7 @@ const page = () => {
     const router = useRouter()
     const handleformSubmit = () => {
         if (title && content && category) {
-            dispatch(blogAdded({ title, category, content, id: nanoid(), date: new Date().toISOString(), }))
+            dispatch(blogAdded(title, category, content))
             setTitle('')
             setCategory('')
             setContent('')
