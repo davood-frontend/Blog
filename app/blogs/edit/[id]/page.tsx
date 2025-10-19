@@ -6,28 +6,27 @@ import Grid from '@mui/material/Grid';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { blogUpdated } from '@/app/reducers/blogSlice';
-import { nanoid } from '@reduxjs/toolkit';
-import { useRouter, notFound } from 'next/navigation';
-import { usePathname } from 'next/navigation';
+import { useRouter, notFound, usePathname } from 'next/navigation';
 
 const page = () => {
     const id = usePathname().split('/').pop()
-    if (!id) {
-        return notFound()
-    }
+    if (!id) return notFound()
+
     const blog = useSelector((state: RootState) => state.blogs.find(blog => blog.id === id))
-    console.log(blog)
+    const dispatch = useDispatch()
+    const router = useRouter()
+
     const [title, setTitle] = useState(blog?.title)
     const [category, setCategory] = useState(blog?.category)
     const [content, setContent] = useState(blog?.content)
-    const dispatch = useDispatch()
-    const router = useRouter()
+    
     const handleformSubmit = () => {
         if (title && content && category) {
             dispatch(blogUpdated({ title, category, content, id }))
             router.push(`/blogs/${id}`)
         }
     }
+    
     return (
         <Box sx={{ display: 'flex', justifyContent: 'center', py: 5 }}>
             <Box sx={{ width: 1 / 2, display: 'flex', flexDirection: 'column', rowGap: 5 }}>
